@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Lista de Disciplinas</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Nome</th>
+          <th>Professor</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let disciplina of disciplinas | async">
+          <td>{{disciplina.id}}</td>
+          <td>{{disciplina.nomeDisciplina}}</td>
+          <td>{{disciplina.professorDisciplina}}</td>
+          <td><button (click)="deleteDisciplina(disciplina.id)" class="btn btn-danger">Deletar</button>
+              <button (click)="updateDisciplina(disciplina.id)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

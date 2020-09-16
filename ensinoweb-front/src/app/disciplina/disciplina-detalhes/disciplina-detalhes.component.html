@@ -1,0 +1,17 @@
+<h2>Detalhes da Disciplina</h2>
+
+<hr/>
+<div *ngIf="disciplina">
+  <div>
+    <label><b>Nome: </b></label> {{disciplina.nomeDisciplina}}
+  </div>
+  <div>
+    <label><b>Professor: </b></label> {{disciplina.professorDisciplina}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Voltar a lista de disciplinas</button><br>
+
+
